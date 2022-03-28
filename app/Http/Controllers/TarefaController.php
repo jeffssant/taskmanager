@@ -14,7 +14,8 @@ class TarefaController extends Controller
      */
     public function index()
     {
-        echo 'tarefa';
+        $user = auth()->user()->name;
+        return $user;
     }
 
     /**

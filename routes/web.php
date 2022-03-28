@@ -2,7 +2,9 @@
 
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\TarefaController;
+use App\Mail\MsgTestMail;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Mail;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -20,7 +22,15 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verify' => true]);
 
-Route::get('/home', [HomeController::class, 'index'])->name('home');
-Route::resource('tarefa', TarefaController::class)->middleware('auth');
+
+Route::get('/home', [HomeController::class, 'index'])->name('home')->middleware('verified');
+Route::resource('tarefa', TarefaController::class)->middleware('verified');
+
+
+Route::get('/msg-test', function() {
+    //Mail::to('santana.jeff@gmail.com')->send(new MsgTestMail());
+   // return 'Email enviado com sucesso';
+    return new MsgTestMail();
+});
