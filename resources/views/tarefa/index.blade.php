@@ -12,11 +12,11 @@
                         </div>
                         <div class="col-6">
                             <div class="float-right">
-                                <a href="{{route('tarefa.create')}}" class="mr-3">Novo</a>
-                                {{-- <a href="{{route('tarefa.exportacao', ['extensao' => 'xlsx'])}}" class="mr-3">XLSX</a>
-                                <a href="{{route('tarefa.exportacao', ['extensao' => 'csv'])}}" class="mr-3">CSV</a>
-                                <a href="{{route('tarefa.exportacao', ['extensao' => 'pdf'])}}" class="mr-3">PDF</a>
-                                <a href="{{route('tarefa.exportar')}}" target="_blank">PDF V2</a> --}}
+                                <a href="{{route('tarefa.create')}}" class="me-5">Novo</a>
+                                <a href="{{route('tarefa.exportacao', ['extensao' => 'xlsx'])}}" class="me-5">XLSX</a>
+                                <a href="{{route('tarefa.exportacao', ['extensao' => 'csv'])}}" class="me-5">CSV</a>
+                                {{-- <a href="{{route('tarefa.exportacao', ['extensao' => 'pdf'])}}" class="me-5">PDF</a> --}}
+                                <a href="{{route('tarefa.exportar')}}" target="_blank">PDF V2</a>
                             </div>
                         </div>
                     </div>
